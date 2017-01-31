@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-
 const session = require('express-session');
 const passport = require('passport');
 
@@ -13,9 +12,11 @@ const index = require('./routes/index');
 const authRoutes = require('./routes/auth.js');
 const userRoutes = require('./routes/user.js');
 const movies = require('./routes/movies');
-
+const directors = require('./routes/directors');
 
 var app = express();
+// override with POST having ?_method=PUT
+app.use(methodOverride('_method'));
 
 //middleware to override data in table
 //when editing.
@@ -57,6 +58,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/directors', directors);
 app.use('/movies', movies);
 
 // catch 404 and forward to error handler
