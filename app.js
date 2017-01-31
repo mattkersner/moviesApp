@@ -4,14 +4,22 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
+
 const session = require('express-session');
 const passport = require('passport');
 
 const index = require('./routes/index');
 const authRoutes = require('./routes/auth.js');
-const userRoutes = require('./routes/user.js')
+const userRoutes = require('./routes/user.js');
+const movies = require('./routes/movies');
+
 
 var app = express();
+
+//middleware to override data in table
+//when editing.
+app.use(methodOverride('_method'));
 
 //require dotenv and use config method
 require('dotenv').config();
@@ -49,6 +57,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/movies', movies);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
