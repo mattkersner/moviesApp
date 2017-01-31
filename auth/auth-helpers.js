@@ -25,3 +25,16 @@ function createUser(req, res) {
     dob: req.body.dob
   });
 }
+
+function loginRequired(req, res, next) {
+  if (!req.user) res.redirect('/auth/login');
+
+  return next();
+}
+
+module.exports = {
+  comparePass,
+  loginRedirect,
+  loginRequired,
+  createUser
+}
