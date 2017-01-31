@@ -4,12 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 var directors = require('./routes/directors');
 
 var app = express();
+// override with POST having ?_method=PUT
+app.use(methodOverride('_method'));
 
 //require dotenv and use config method
 require('dotenv').config();
