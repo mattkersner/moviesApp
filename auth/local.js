@@ -11,6 +11,7 @@ init();
 
 passport.use(new LocalStrategy(options, (username, password, done) => {
   //check to see if the username exists
+  //difference between fazbook - findOne vs findAll
   models.User.findOne({
     where: {
       username: username
@@ -18,6 +19,7 @@ passport.use(new LocalStrategy(options, (username, password, done) => {
   })
   .then((user) => {
     console.log(user);
+    //diffrence between fazbook - if user is false, vs if user[0]===undefined
     if (!user) {
       return done(null, false);
     }
