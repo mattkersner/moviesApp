@@ -1,0 +1,19 @@
+<% include ../partials/head.ejs %>
+  <body>
+    <% include ../partials/header.ejs %>
+    <main>
+      <ul class="collection z-depth-3" style="width: 80%">
+    <li class="collection-item avatar" style="background-color: rgba(255, 255, 255, .6)">
+    <i class="material-icons prefix">account_circle</i>
+      <span class="title" style="font-size: 2em"><%= user.username %></span>
+      <p style="font-size: 1.2em">Name: <%= user.firstName %> <%= user.lastName %><br>
+         Email: <%= user.email %><br>
+         Birthday: <%= user.dob %>
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons" style="color: black">grade</i></a>
+    </li>
+  </ul>
+    </main>
+    <% include ../partials/jsdefaults.ejs %>
+  </body>
+</html>

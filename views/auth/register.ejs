@@ -1,42 +1,41 @@
 <% include ../partials/head.ejs %>
 <body>
-<!--     <% include ../partials/header.ejs %> -->
+    <% include ../partials/header.ejs %>
     <main>
       <div class="container">
-        <form action="/auth/register" method="post" style="margin-top: 40px;">
+        <form action="/auth/register" method="post">
           <div class="input-field">
-            <label class="active" style="font-size: 1.5em">Username:</label>
+            <label>Username:</label>
             <input type="text" name="username"/>
           </div>
           <div class="input-field">
-            <label class="active" style="font-size: 1.5em">Password:</label>
+            <label>Password:</label>
             <input type="password" name="password"/>
           </div>
           <div class="input-field">
-            <label class="active" style="font-size: 1.5em">First Name:</label>
+            <label>First Name:</label>
             <input type="text" name="firstName"/>
           </div>
           <div class="input-field">
-            <label class="active" style="font-size: 1.5em">Last Name:</label>
+            <label>Last Name:</label>
             <input type="text" name="lastName"/>
           </div>
           <div class="input-field">
-            <label class="active" style="font-size: 1.5em">Email:</label>
+            <label>Email:</label>
             <input type="text" name="email"/>
           </div>
           <div class="input-field">
-            <label class="active" style="font-size: 1.5em">Date of Birth:</label>
+            <label class="active">Date of Birth:</label>
             <input type="date" class="datepicker" name="dob"/>
           </div>
           <div>
-            <button class="btn waves-effect waves-light black" type="submit" name="action" style="margin-bottom: 10px">Submit
+            <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
             <i class="material-icons right">send</i>
             </button>
           </div>
         </form>
       </div>
     </main>
-<!--     <% include ../partials/footer.ejs %> -->
     <% include ../partials/jsdefaults.ejs %>
   </body>
 </html>
