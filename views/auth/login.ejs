@@ -1,0 +1,26 @@
+<% include ../partials/head.ejs %>
+  <body>
+<!--     <% include ../partials/header.ejs %> -->
+    <main style="background-image: none">
+      <div class="container">
+        <form action="/auth/login" method="post">
+          <div class="input-field">
+            <input type="text" id="username" name="username"/>
+            <label class="active" for="username">Username:</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="password" name="password"/>
+            <label class="active" for="password">Password:</label>
+          </div>
+          <div>
+            <button class="btn waves-effect waves-light black" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+<!--     <% include ../partials/footer.ejs %> -->
+    <% include ../partials/jsdefaults.ejs %>
+  </body>
+</html>
