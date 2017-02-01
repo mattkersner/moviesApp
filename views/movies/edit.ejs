@@ -1,0 +1,12 @@
+<form action="<%= '/movies/' + movie.id + '?_method=PUT' %>" method="POST">
+
+  <label>Title
+    <input name="title" value="<%= movie.title %>" />
+  </label>
+  <label>Synopsis:
+    <textarea name="synopsis" value=""><%= movie.synopsis %>
+    </textarea>
+  </label>
+  <input type="submit" value="update" />
+
+</form>

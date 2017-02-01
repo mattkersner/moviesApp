@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
   background-color: #F9ED69;
   display: flex;
   min-height: 100vh;
@@ -110,5 +111,8 @@ footer.page-footer {
 
 footer h5 {
   color: #F9ED69; }
+=======
+  background-color: #e6ffe6; }
+>>>>>>> master
 
 /*# sourceMappingURL=style.css.map */

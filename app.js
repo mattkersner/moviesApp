@@ -1,18 +1,27 @@
-const express = require('express');
-const path = require('path');
-const favicon = require('serve-favicon');
-const logger = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 const session = require('express-session');
 const passport = require('passport');
 
 //requiring routes and setting to variables
 const index = require('./routes/index');
-const authRoutes = require('./routes/auth');
-const userRoutes = require('./routes/user');
+const authRoutes = require('./routes/auth.js');
+const userRoutes = require('./routes/user.js');
+const movies = require('./routes/movies');
+const directors = require('./routes/directors');
 
-const app = express();
+var app = express();
+// override with POST having ?_method=PUT
+app.use(methodOverride('_method'));
+
+//middleware to override data in table
+//when editing.
+app.use(methodOverride('_method'));
 
 //require dotenv and use config method
 require('dotenv').config();
@@ -47,6 +56,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
+app.use('/directors', directors);
+app.use('/movies', movies);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
