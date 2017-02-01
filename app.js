@@ -8,6 +8,7 @@ var methodOverride = require('method-override');
 const session = require('express-session');
 const passport = require('passport');
 
+//requiring routes and setting to variables
 const index = require('./routes/index');
 const authRoutes = require('./routes/auth.js');
 const userRoutes = require('./routes/user.js');
@@ -28,11 +29,6 @@ require('dotenv').config();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-//update routes
-app.use('/', index);
-app.use('/auth', authRoutes);
-app.use('/user', userRoutes);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -56,14 +52,16 @@ app.use(require('node-sass-middleware')({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+//app.use define routes AFTER middleware is USED!!!!!
 app.use('/', index);
-app.use('/users', users);
+app.use('/auth', authRoutes);
+app.use('/user', userRoutes);
 app.use('/directors', directors);
 app.use('/movies', movies);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });

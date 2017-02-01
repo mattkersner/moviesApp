@@ -1,3 +1,136 @@
+$yellow: #F9ED69;
+$orange: #F08A5D;
+$red: #B83B5E;
+$purple: #6A2C70;
+
+
 body {
-  background-color: lighten(green, 70%);
+  background-color: $yellow;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.collection {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.nav-wrapper {
+  background-color: $purple;
+  a {
+    color: $yellow;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+.btn {
+  background-color: $purple;
+  &:hover {
+    background-color: $red;
+  }
+}
+
+.picker__box {
+  color: $red;
+}
+
+.picker__close, .picker__today {
+  color: $red;
+}
+
+.picker__day.picker__day--today {
+  color: $red;
+}
+
+.picker__weekday-display {
+  background-color: $purple;
+  color: $yellow;
+}
+
+.picker__date-display {
+  background-color: $red;
+}
+
+.input-field label {
+     color: $purple;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: $purple;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+.input-field input[type=password]:focus + label {
+  color: $purple;
+}
+/* label underline focus color */
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+/* valid color */
+.input-field input[type=password].valid {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+/* invalid color */
+.input-field input[type=password].invalid {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+.input-field input[type=date]:focus + label {
+  color: $purple;
+}
+/* label underline focus color */
+.input-field input[type=date]:focus {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+/* valid color */
+.input-field input[type=date].valid {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+/* invalid color */
+.input-field input[type=date].invalid {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: $purple;
+}
+
+footer.page-footer {
+  background-color: $purple;
+  a {
+    color: $yellow;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+footer h5 {
+  color: $yellow;
 }
