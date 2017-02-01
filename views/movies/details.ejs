@@ -1,8 +1,18 @@
+<% include ../partials/head.ejs %>
+<body>
+<% include ../partials/header.ejs %>
+<main>
 <div><%= movie.id %></div>
 <div><%= movie.title %></div>
 <div><%= movie.synopsis %></div>
-
+<form action="/favorites" method="post">
+<button type="submit">favorite</button>
+</form>
 <button><a href="<%= '/movies/' + movie.id + '/edit' %>">edit</a></button>
 
 <a href="<%= '/movies' %>">Back to Movies</a>
+</main>
+<% include ../partials/footer.ejs %>
+<% include ../partials/jsdefaults.ejs %>
+</body>
 

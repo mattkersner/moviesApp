@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<% include ../partials/head.ejs %>
+<body>
+<% include ../partials/header.ejs %>
+<main>
     <h1>Directors</h1>
     <% directors.forEach(function(director) { %>
       <div>
@@ -15,5 +14,8 @@
         </p>
       </div>
     <% }); %>
-  </body>
+</main>
+<% include ../partials/footer.ejs %>
+<% include ../partials/jsdefaults.ejs %>
+</body>
 </html>

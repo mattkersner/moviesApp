@@ -1,3 +1,7 @@
+<% include ../partials/head.ejs %>
+<body>
+<% include ../partials/header.ejs %>
+<main>
 <form action="<%= '/movies/' + movie.id + '?_method=PUT' %>" method="POST">
 
   <label>Title
@@ -10,3 +14,7 @@
   <input type="submit" value="update" />
 
 </form>
+</main>
+<% include ../partials/footer.ejs %>
+<% include ../partials/jsdefaults.ejs %>
+</body>

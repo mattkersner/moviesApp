@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <a href="/directors/<%= director.id %>">Cancel</a>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<% include ../partials/head.ejs %>
+<body>
+<% include ../partials/header.ejs %>
+<main>
     <div>
       <h1>Editing Director <%= director.id %>'s Profile:</h1>
       <p>Name: <%= director.name %></p>
@@ -17,6 +15,10 @@
       <input type="submit" value="Update" />
         </input>
       </form>
+      <a href="/directors/<%= director.id %>">Cancel</a>
     </div>
-  </body>
+</main>
+<% include ../partials/footer.ejs %>
+<% include ../partials/jsdefaults.ejs %>
+</body>
 </html>
