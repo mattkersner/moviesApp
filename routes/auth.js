@@ -1,15 +1,14 @@
 const express = require('express');
-const router = express.Router();
-
 const authHelpers = require('../auth/auth-helpers');
 const passport = require('../auth/local');
+const router = express.Router();
 
 router.get('/register', authHelpers.loginRedirect, (req, res) => {
   res.render('auth/register');
 });
 
 router.post('/register', (req, res, next) => {
-  authHelpers.createuser(req, res)
+  authHelpers.createUser(req, res)
   .then((user) => {
     req.login(user, (err) => {
       if (err) return next(err);
