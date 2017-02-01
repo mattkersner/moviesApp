@@ -1,4 +1,98 @@
 body {
-  background-color: green; }
+  background-color: #F9ED69; }
+
+.collection {
+  margin: 0 auto;
+  margin-top: 50px; }
+
+.nav-wrapper {
+  background-color: #6A2C70; }
+  .nav-wrapper a {
+    color: #F9ED69; }
+    .nav-wrapper a:hover {
+      color: #B83B5E; }
+
+.btn {
+  background-color: #6A2C70; }
+  .btn:hover {
+    background-color: #B83B5E; }
+
+.picker__box {
+  color: #B83B5E; }
+
+.picker__close, .picker__today {
+  color: #B83B5E; }
+
+.picker__day.picker__day--today {
+  color: #B83B5E; }
+
+.picker__weekday-display {
+  background-color: #6A2C70;
+  color: #F9ED69; }
+
+.picker__date-display {
+  background-color: #B83B5E; }
+
+.input-field label {
+  color: #6A2C70; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #6A2C70; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+.input-field input[type=password]:focus + label {
+  color: #6A2C70; }
+
+/* label underline focus color */
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+/* valid color */
+.input-field input[type=password].valid {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+/* invalid color */
+.input-field input[type=password].invalid {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+.input-field input[type=date]:focus + label {
+  color: #6A2C70; }
+
+/* label underline focus color */
+.input-field input[type=date]:focus {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+/* valid color */
+.input-field input[type=date].valid {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+/* invalid color */
+.input-field input[type=date].invalid {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #6A2C70; }
 
 /*# sourceMappingURL=style.css.map */
