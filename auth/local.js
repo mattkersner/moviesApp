@@ -18,12 +18,13 @@ passport.use(new LocalStrategy(options, (username, password, done) => {
     }
   })
   .then((user) => {
-    console.log(user);
     //diffrence between fazbook - if user is false, vs if user[0]===undefined
     if (!user) {
       return done(null, false);
     }
     if (!authHelpers.comparePass(password, user.dataValues.password)) {
+      return done(null, false);
+    } else {
       return done(null, user.dataValues);
     }
   })
