@@ -15,7 +15,6 @@ const movies = require('./routes/movies');
 const directors = require('./routes/directors');
 
 var app = express();
-
 // override with POST having ?_method=PUT
 app.use(methodOverride('_method'));
 
