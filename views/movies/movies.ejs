@@ -1,11 +1,16 @@
+
 <a href="movies/new">Add new Movie</a>
 <h1>Movies</h1>
+<ul>
 <% movies.forEach(function(movie) { %>
-<div>
+<li>
+
 <form action="<%= '/movies/' + movie.id + '?_method=DELETE' %>" method="POST">
 <button type="submit">x</button>
 </form>
 <a href="<%= '/movies/' + movie.id %>"><%= movie.title %></a>
 
-</div>
+
+</li>
 <% }); %>
+</ul>
