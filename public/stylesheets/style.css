@@ -1,5 +1,11 @@
 body {
-  background-color: #F9ED69; }
+  background-color: #F9ED69;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+main {
+  flex: 1 0 auto; }
 
 .collection {
   margin: 0 auto;
@@ -94,5 +100,15 @@ body {
 /* icon prefix focus color */
 .input-field .prefix.active {
   color: #6A2C70; }
+
+footer.page-footer {
+  background-color: #6A2C70; }
+  footer.page-footer a {
+    color: #F9ED69; }
+    footer.page-footer a:hover {
+      color: #B83B5E; }
+
+footer h5 {
+  color: #F9ED69; }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,13 @@ $purple: #6A2C70;
 
 body {
   background-color: $yellow;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .collection {
@@ -112,4 +119,18 @@ body {
 /* icon prefix focus color */
 .input-field .prefix.active {
   color: $purple;
+}
+
+footer.page-footer {
+  background-color: $purple;
+  a {
+    color: $yellow;
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+footer h5 {
+  color: $yellow;
 }
