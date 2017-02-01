@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <a href="/directors">Back to Director Index</a>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div>
+      <h1>Director <%= director.id %>'s Profile:</h1>
+      <p>Name: <%= director.name %></p>
+      <p>Last Updated: <%= director.updatedAt %></p>
+      <a href="<%= `/directors/${director.id}/edit` %>">
+        <button type="submit">Edit Name</button>
+      </a>
+
+
+    </div>
+  </body>
+</html>

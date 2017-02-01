@@ -4,6 +4,10 @@
 	"sources": [
 		"style.scss"
 	],
+<<<<<<< HEAD
 	"mappings": "",
+=======
+	"mappings": "AAAA,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAE,OAAO,GAC1B",
+>>>>>>> master
 	"names": []
 }

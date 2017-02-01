@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <a href="/directors/<%= director.id %>">Cancel</a>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div>
+      <h1>Editing Director <%= director.id %>'s Profile:</h1>
+      <p>Name: <%= director.name %></p>
+      <form action="<%= `/directors/${director.id}?_method=PUT` %>" method="POST">
+        <label>
+        First Name:
+        <input name="name" value="<%= director.name %>" />
+      </label>
+      <input type="submit" value="Update" />
+        </input>
+      </form>
+    </div>
+  </body>
+</html>
