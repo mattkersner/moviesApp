@@ -1,5 +1,5 @@
 body {
-  background-color: #F9ED69;
+  background-color: #FDF196;
   display: flex;
   min-height: 100vh;
   flex-direction: column; }
@@ -14,7 +14,7 @@ main {
 .nav-wrapper {
   background-color: #6A2C70; }
   .nav-wrapper a {
-    color: #F9ED69; }
+    color: #FDF196; }
     .nav-wrapper a:hover {
       color: #B83B5E; }
 
@@ -34,7 +34,7 @@ main {
 
 .picker__weekday-display {
   background-color: #6A2C70;
-  color: #F9ED69; }
+  color: #FDF196; }
 
 .picker__date-display {
   background-color: #B83B5E; }
@@ -104,11 +104,11 @@ main {
 footer.page-footer {
   background-color: #6A2C70; }
   footer.page-footer a {
-    color: #F9ED69; }
+    color: #FDF196; }
     footer.page-footer a:hover {
       color: #B83B5E; }
 
 footer h5 {
-  color: #F9ED69; }
+  color: #FDF196; }
 
 /*# sourceMappingURL=style.css.map */

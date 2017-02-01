@@ -14,6 +14,7 @@ const authRoutes = require('./routes/auth.js');
 const userRoutes = require('./routes/user.js');
 const movies = require('./routes/movies');
 const directors = require('./routes/directors');
+const favorites = require('./routes/favorites');
 
 var app = express();
 // override with POST having ?_method=PUT
@@ -58,6 +59,7 @@ app.use('/auth', authRoutes);
 app.use('/user', userRoutes);
 app.use('/directors', directors);
 app.use('/movies', movies);
+app.use('/favorites', favorites);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

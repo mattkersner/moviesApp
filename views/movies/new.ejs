@@ -1,4 +1,7 @@
-<% include head.ejs %>
+<% include ../partials/head.ejs %>
+<body>
+<% include ../partials/header.ejs %>
+<main>
 <h1>Add New Movie</h1>
 <a href="/movies">Go Back</a>
 <form action="/movies" method="POST">
@@ -11,3 +14,7 @@
   </label>
   <input type="submit" value="Add Movie" />
 </form>
+</main>
+<% include ../partials/footer.ejs %>
+<% include ../partials/jsdefaults.ejs %>
+</body>
