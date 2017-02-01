@@ -6,6 +6,7 @@
 <div><%= movie.title %></div>
 <div><%= movie.synopsis %></div>
 <form action="/favorites" method="post">
+<input type="text" style="display:none" value="<%= movie.id %>" name="movieId">
 <button type="submit">favorite</button>
 </form>
 <button><a href="<%= '/movies/' + movie.id + '/edit' %>">edit</a></button>
