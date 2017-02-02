@@ -1,14 +1,15 @@
 <% include ../partials/head.ejs %>
   <body>
     <% include ../partials/header.ejs %>
-      <a href="movies/new">Add new Movie</a>
-      <h1>Movies</h1>
-      <ul>
+
+      <a href="movies/new" class="add-movie">+ Add new Movie</a>
+      <h1 class="center">Movies</h1>
+      <ul class ="movie-list collection">
         <% movies.forEach(function(movie) { %>
-        <li>
+        <li class="collection-item movie-list-item">
           <form action="<%= '/movies/' + movie.id + '?_method=DELETE' %>" method="POST">
             <a href="<%= '/movies/' + movie.id %>"><%= movie.title %></a>
-            <button type="submit">x</button>
+            <button type="submit" class="delete-btn center">delete</button>
           </form>
         </li>
         <% }); %>
