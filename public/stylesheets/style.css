@@ -163,7 +163,8 @@ footer h5 {
 
 .collection a.collection-item {
   background-color: #FDF196;
-  color: #6A2C70; }
+  color: #6A2C70;
+  height: 50px; }
   .collection a.collection-item:hover {
     background-color: #FDF196;
     color: #B83B5E; }
