@@ -1,19 +1,52 @@
 <% include ../partials/head.ejs %>
 <body>
 <% include ../partials/header.ejs %>
-<main>
-<div><%= movie.id %></div>
-<div><%= movie.title %></div>
-<div><%= movie.synopsis %></div>
-<form action="/favorites" method="post">
+<main class="movie-details">
+ <table>
+
+
+        <tbody>
+          <tr>
+            <td class="announce">Movie Number:</td>
+            <td><%= movie.id %></td>
+
+          </tr>
+          <tr>
+            <td class="announce">Title:</td>
+            <td><span class="movie-title"><%= movie.title %></span></td>
+
+          </tr>
+          <tr>
+            <td class="announce">Synopsis:</td>
+            <td><%= movie.synopsis %></td>
+
+          </tr>
+        </tbody>
+      </table>
+      <form action="/favorites" method="post">
 <input type="text" style="display:none" value="<%= movie.id %>" name="movieId">
 <button type="submit">favorite</button>
 </form>
 <button><a href="<%= '/movies/' + movie.id + '/edit' %>">edit</a></button>
 
 <a href="<%= '/movies' %>">Back to Movies</a>
+
+<!-- <div><span class="announce">Movie number: </span><%= movie.id %></div>
+<div><span class="announce">Title: </span><%= movie.title %></div>
+<div><span class="announce">Synopsis: </span><%= movie.synopsis %></div>
+<form action="/favorites" method="post">
+<input type="text" style="display:none" value="<%= movie.id %>" name="movieId">
+<button type="submit">favorite</button>
+</form>
+<button><a href="<%= '/movies/' + movie.id + '/edit' %>">edit</a></button>
+
+<a href="<%= '/movies' %>">Back to Movies</a> -->
 </main>
+
+
 <% include ../partials/footer.ejs %>
 <% include ../partials/jsdefaults.ejs %>
 </body>
+
+
 

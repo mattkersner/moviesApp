@@ -114,4 +114,28 @@ footer h5 {
 .reel {
   margin: 40px 0 40px 0; }
 
+.collection .movie-list-item {
+  background-color: #FDF196;
+  font-size: 25px; }
+
+.delete-btn {
+  font-size: 15px;
+  border-radius: 5px; }
+
+.movie-details {
+  margin: 20px;
+  line-height: 20px;
+  font-size: 20px; }
+
+.announce {
+  font-family: 'Barrio', cursive; }
+
+.movie-title {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 30px; }
+
+.add-movie {
+  margin: 20px;
+  font-size: 30px; }
+
 /*# sourceMappingURL=style.css.map */
