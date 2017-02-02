@@ -1,5 +1,6 @@
 {
   "development": {
+    "username": "mattkersner",
     "password": null,
     "database": "movies_app_development",
     "host": "127.0.0.1",
@@ -9,3 +10,5 @@
     "use_env_variable": "DATABASE_URL"
   }
 }
+
+
