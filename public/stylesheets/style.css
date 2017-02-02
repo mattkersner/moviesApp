@@ -7,6 +7,9 @@ body {
 main {
   flex: 1 0 auto; }
 
+h1 {
+  color: #6A2C70; }
+
 .collection {
   margin: 0 auto;
   margin-top: 50px; }
@@ -19,7 +22,8 @@ main {
       color: #B83B5E; }
 
 .btn {
-  background-color: #6A2C70; }
+  background-color: #6A2C70;
+  color: #FDF196; }
   .btn:hover {
     background-color: #B83B5E; }
 
@@ -58,6 +62,24 @@ main {
 
 /* invalid color */
 .input-field input[type=text].invalid {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+.input-field input[type=textarea]:focus + label {
+  color: #6A2C70; }
+
+/* label underline focus color */
+.input-field input[type=textarea]:focus {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+/* valid color */
+.input-field input[type=textarea].valid {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+/* invalid color */
+.input-field input[type=textarea].invalid {
   border-bottom: 1px solid #6A2C70;
   box-shadow: 0 1px 0 0 #6A2C70; }
 
@@ -114,9 +136,11 @@ footer h5 {
 .reel {
   margin: 40px 0 40px 0; }
 
-.collection .movie-list-item {
+.collection-item {
   background-color: #FDF196;
-  font-size: 25px; }
+  font-size: 2em; }
+  .collection-item .btn {
+    color: #FDF196; }
 
 .delete-btn {
   font-size: 15px;
@@ -135,7 +159,20 @@ footer h5 {
   font-size: 30px; }
 
 .add-movie {
-  margin: 20px;
-  font-size: 30px; }
+  color: #FDF196; }
+
+.collection a.collection-item {
+  background-color: #FDF196;
+  color: #6A2C70; }
+  .collection a.collection-item:hover {
+    background-color: #FDF196;
+    color: #B83B5E; }
+
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #6A2C70;
+  box-shadow: 0 1px 0 0 #6A2C70; }
+
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #6A2C70; }
 
 /*# sourceMappingURL=style.css.map */

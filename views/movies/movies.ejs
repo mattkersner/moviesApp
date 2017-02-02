@@ -1,18 +1,18 @@
 <% include ../partials/head.ejs %>
   <body>
     <% include ../partials/header.ejs %>
-
-      <a href="movies/new" class="add-movie">+ Add new Movie</a>
+    <div class="center">
       <h1 class="center">Movies</h1>
-      <ul class ="movie-list collection">
+      <button class="btn"><a href="movies/new" class="add-movie">Add New Movie<i class="material-icons right">add</i></a></button>
+    </div>
+      <div class ="collection col s12">
         <% movies.forEach(function(movie) { %>
-        <li class="collection-item movie-list-item">
-          <form action="<%= '/movies/' + movie.id + '?_method=DELETE' %>" method="POST">
-            <a href="<%= '/movies/' + movie.id %>"><%= movie.title %></a>
-            <button type="submit" class="delete-btn center">delete</button>
+          <form action="<%= '/movies/' + movie.id + '?_method=DELETE' %>" method="POST" class="row">
+            <a href="<%= '/movies/' + movie.id %>" class="collection-item col s10"><%= movie.title %></a>
+            <button type="submit" class="btn right col s2">delete
+            <i class="material-icons right">delete</i></button>
           </form>
-        </li>
         <% }); %>
-      </ul>
+      </div>
     <% include ../partials/footer.ejs %>
   <% include ../partials/jsdefaults.ejs %>

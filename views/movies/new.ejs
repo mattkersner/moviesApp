@@ -2,20 +2,26 @@
 <body>
 <% include ../partials/header.ejs %>
 <main>
-<h1>Add New Movie</h1>
-<a href="/movies">Go Back</a>
-<form action="/movies" method="POST">
-  <label>Title
-    <input name="title" placeholder="Title" />
-  </label>
-
-  <label>Synopsis
-    <textarea  name="synopsis" placeholder="Movie Synopsis">
-    </textarea>
-  </label>
-
-  <input type="submit" value="Add Movie" />
-</form>
+<h1 class="center">Add New Movie</h1>
+<div class="row">
+    <form action="/movies" method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+          <label class="active">Title</label>
+          <input type="text" name="title" />
+        </div>
+        <div class="input-field col s4">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Synopsis</label>
+        </div>
+        <div class="input-field col s4">
+        <button class="btn waves-effect waves-light" type="submit" name="action" style="margin-bottom: 10px">Add Movie
+        <i class="material-icons right">add</i>
+        </button>
+      </div>
+      </div>
+    </form>
+  </div>
 </main>
 <% include ../partials/footer.ejs %>
 <% include ../partials/jsdefaults.ejs %>

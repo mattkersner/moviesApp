@@ -15,6 +15,10 @@ main {
   flex: 1 0 auto;
 }
 
+h1 {
+  color: $purple;
+}
+
 .collection {
   margin: 0 auto;
   margin-top: 50px;
@@ -32,6 +36,7 @@ main {
 
 .btn {
   background-color: $purple;
+  color: $yellow;
   &:hover {
     background-color: $red;
   }
@@ -77,6 +82,24 @@ main {
 }
 /* invalid color */
 .input-field input[type=text].invalid {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+.input-field input[type=textarea]:focus + label {
+  color: $purple;
+}
+/* label underline focus color */
+.input-field input[type=textarea]:focus {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+/* valid color */
+.input-field input[type=textarea].valid {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+/* invalid color */
+.input-field input[type=textarea].invalid {
   border-bottom: 1px solid $purple;
   box-shadow: 0 1px 0 0 $purple;
 }
@@ -139,9 +162,12 @@ footer h5 {
   margin: 40px 0 40px 0;
 }
 
-.collection .movie-list-item  {
+.collection-item {
   background-color: $yellow;
-  font-size: 25px;
+  font-size: 2em;
+  .btn {
+    color: $yellow;
+  }
 }
 
 .delete-btn {
@@ -165,7 +191,24 @@ footer h5 {
 }
 
 .add-movie {
-  margin: 20px;
-  font-size: 30px;
+  color: $yellow;
+}
+
+.collection a.collection-item {
+  background-color: $yellow;
+  color: $purple;
+  &:hover {
+    background-color: $yellow;
+    color: $red;
+  }
+}
+
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid $purple;
+  box-shadow: 0 1px 0 0 $purple;
+}
+
+textarea.materialize-textarea:focus:not([readonly])+label {
+  color: $purple;
 }
 
